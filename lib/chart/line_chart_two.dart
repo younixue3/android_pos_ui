@@ -1,14 +1,14 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class LineChartHome extends StatefulWidget {
-  const LineChartHome({Key? key}) : super(key: key);
+class LineChartHomeTwo extends StatefulWidget {
+  const LineChartHomeTwo({Key? key}) : super(key: key);
 
   @override
-  _LineChartHomeState createState() => _LineChartHomeState();
+  _LineChartHomeTwoState createState() => _LineChartHomeTwoState();
 }
 
-class _LineChartHomeState extends State<LineChartHome> {
+class _LineChartHomeTwoState extends State<LineChartHomeTwo> {
   bool showAvg = false;
 
   @override
@@ -16,7 +16,7 @@ class _LineChartHomeState extends State<LineChartHome> {
     return Stack(
       children: <Widget>[
         AspectRatio(
-          aspectRatio: 2.2,
+          aspectRatio: 1.8,
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
@@ -49,12 +49,20 @@ class _LineChartHomeState extends State<LineChartHome> {
               color: Colors.black, fontWeight: FontWeight.bold, fontSize: 16),
           getTitles: (value) {
             switch (value.toInt()) {
+              case 1:
+                return 'Su';
               case 2:
-                return 'MAR';
+                return 'Mo';
+              case 3:
+                return 'Tu';
+              case 4:
+                return 'We';
               case 5:
-                return 'JUN';
-              case 8:
-                return 'SEP';
+                return 'Th';
+              case 6:
+                return 'Sr';
+              case 7:
+                return 'Fa';
             }
             return '';
           },
@@ -68,17 +76,6 @@ class _LineChartHomeState extends State<LineChartHome> {
             fontWeight: FontWeight.bold,
             fontSize: 15,
           ),
-          getTitles: (value) {
-            switch (value.toInt()) {
-              case 1:
-                return '10k';
-              case 3:
-                return '30k';
-              case 5:
-                return '50k';
-            }
-            return '';
-          },
           reservedSize: 32,
           margin: 12,
         ),
@@ -86,20 +83,19 @@ class _LineChartHomeState extends State<LineChartHome> {
       borderData: FlBorderData(
           show: true,
           border: Border.all(color: const Color(0xff37434d), width: 0.3)),
-      minX: 0,
-      maxX: 11,
+      minX: 1,
+      maxX: 7,
       minY: 0,
-      maxY: 6,
       lineBarsData: [
         LineChartBarData(
           spots: const [
-            FlSpot(0, 3),
-            FlSpot(2.6, 2),
-            FlSpot(4.9, 5),
-            FlSpot(6.8, 3.1),
-            FlSpot(8, 4),
-            FlSpot(9.5, 3),
-            FlSpot(11, 4),
+            FlSpot(1, 1),
+            FlSpot(2, 5),
+            FlSpot(3, 4),
+            FlSpot(4, 3),
+            FlSpot(5, 7),
+            FlSpot(6, 4),
+            FlSpot(7, 8),
           ],
           colors: [Colors.white],
           barWidth: 1,
