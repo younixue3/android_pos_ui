@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-      ),
+          primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: Color.fromARGB(255, 228, 238, 255)),
       home: const MyHomePage(),
     );
   }
@@ -55,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       children: [
                         IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.menu, color: Colors.white),
+                          icon: Icon(Icons.menu,
+                              color: Color.fromARGB(255, 228, 238, 255)),
                         ),
                         Container(
                           height: 40,
@@ -90,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           children: [
                             Container(
                               margin: EdgeInsets.only(top: 120),
-                              color: Color.fromARGB(250, 250, 250, 250),
+                              color: Color.fromARGB(255, 228, 238, 255),
                               height: 40,
                             ),
                             Container(
@@ -100,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Card(
-                                    color: Colors.indigoAccent,
+                                    color: Colors.blueAccent,
                                     child: Container(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 10),
@@ -108,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         spacing: 15,
                                         children: [
                                           IconButton(
-                                            splashColor: Colors.indigo,
+                                            splashColor: Colors.white54,
                                             splashRadius: 32,
                                             onPressed: () {},
                                             icon: Icon(
@@ -179,32 +180,75 @@ class _MyHomePageState extends State<MyHomePage> {
               options: CarouselOptions(
                 reverse: false,
                 enableInfiniteScroll: false,
-                enlargeCenterPage: true,
-                aspectRatio: 0.5,
+                aspectRatio: 0.3,
                 pageViewKey: PageStorageKey<String>('carousel_slider'),
               ),
               items: [
-                Column(
-                  children: [
-                    Card(
-                      child: LineChartHomeOne(),
-                    ),
-                    Container(
-                      height: 500,
-                      color: Colors.red,
-                    )
-                  ],
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 6),
+                  child: Column(
+                    children: [
+                      Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Container(
+                          width: 500,
+                          height: 150,
+                          padding: EdgeInsetsDirectional.all(10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            gradient: LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [Colors.indigo, Colors.indigoAccent]),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('eek', style: TextStyle(color: Colors.white))
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 500,
+                        width: 500,
+                        margin: EdgeInsets.only(top: 10),
+                        child: Card(
+                          child: Container(
+                            padding: EdgeInsets.all(10),
+                            child: Text('Outlet Balikpapan Baru',
+                                style: TextStyle(fontSize: 25)),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-                Column(
-                  children: [
-                    Card(
-                      child: LineChartHomeTwo(),
-                    ),
-                    Container(
-                      height: 500,
-                      color: Colors.red,
-                    )
-                  ],
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 6),
+                  child: Column(
+                    children: [
+                      Card(
+                        child: Container(
+                          padding: EdgeInsets.only(bottom: 10),
+                          child: LineChartHomeOne(),
+                        ),
+                      ),
+                      Container(
+                        height: 500,
+                        width: 500,
+                        margin: EdgeInsets.only(top: 10),
+                        child: Card(
+                          child: Container(
+                            padding: EdgeInsets.all(10),
+                            child: Text('Outlet Balikpapan Baru',
+                                style: TextStyle(fontSize: 25)),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -212,167 +256,5 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
     );
-    // body: Stack(
-    //   children: [
-    //     Container(
-    //       height: 220,
-    //       decoration: BoxDecoration(color: Colors.indigo),
-    //     ),
-    //     Container(
-    //       padding: EdgeInsets.only(right: 20, left: 10),
-    //       margin: EdgeInsets.only(top: 20),
-    //       child: Row(
-    //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //         children: [
-    //           IconButton(
-    //             onPressed: () {},
-    //             icon: Icon(Icons.menu, color: Colors.white),
-    //           ),
-    //           Container(
-    //             height: 40,
-    //             width: 40,
-    //             decoration: BoxDecoration(
-    //                 borderRadius: BorderRadius.circular(20),
-    //                 image: DecorationImage(
-    //                     fit: BoxFit.cover,
-    //                     image: AssetImage(
-    //                         'assets/public/57774948_2440392989306240_790466375524024320_n.jpg'))),
-    //           )
-    //         ],
-    //       ),
-    //     ),
-    //     Container(
-    //       padding: EdgeInsets.symmetric(horizontal: 20),
-    //       margin: EdgeInsets.only(top: 70),
-    //       child: Column(
-    //         crossAxisAlignment: CrossAxisAlignment.start,
-    //         children: [
-    //           Text(
-    //             "Hi, Ricko Tiaka",
-    //             style: TextStyle(
-    //               fontSize: 25,
-    //               color: Colors.white,
-    //               fontWeight: FontWeight.w300,
-    //             ),
-    //             textAlign: TextAlign.right,
-    //           ),
-    //           Container(
-    //             margin: EdgeInsets.only(top: 90),
-    //             child: Column(
-    //               mainAxisAlignment: MainAxisAlignment.center,
-    //               children: [
-    //                 Card(
-    //                   color: Colors.indigoAccent,
-    //                   child: Container(
-    //                     padding: EdgeInsets.symmetric(horizontal: 10),
-    //                     child: Wrap(
-    //                       spacing: 15,
-    //                       children: [
-    //                         IconButton(
-    //                           splashColor: Colors.indigo,
-    //                           splashRadius: 32,
-    //                           onPressed: () {},
-    //                           icon: Icon(
-    //                             Icons.stacked_line_chart,
-    //                             color: Colors.white,
-    //                             size: 28,
-    //                           ),
-    //                         ),
-    //                         IconButton(
-    //                           splashColor: Colors.indigo,
-    //                           splashRadius: 32,
-    //                           onPressed: () {},
-    //                           icon: Icon(
-    //                             Icons.menu_book,
-    //                             color: Colors.white38,
-    //                             size: 28,
-    //                           ),
-    //                         ),
-    //                         IconButton(
-    //                           splashColor: Colors.indigo,
-    //                           splashRadius: 32,
-    //                           onPressed: () {},
-    //                           icon: Icon(
-    //                             Icons.food_bank,
-    //                             color: Colors.white38,
-    //                             size: 28,
-    //                           ),
-    //                         ),
-    //                         IconButton(
-    //                           splashColor: Colors.indigo,
-    //                           splashRadius: 32,
-    //                           onPressed: () {},
-    //                           icon: Icon(
-    //                             Icons.stacked_line_chart,
-    //                             color: Colors.white38,
-    //                             size: 28,
-    //                           ),
-    //                         ),
-    //                         IconButton(
-    //                           splashColor: Colors.indigo,
-    //                           splashRadius: 32,
-    //                           onPressed: () {},
-    //                           icon: Icon(
-    //                             Icons.stacked_line_chart,
-    //                             color: Colors.white38,
-    //                             size: 28,
-    //                           ),
-    //                         )
-    //                       ],
-    //                     ),
-    //                   ),
-    //                 ),
-    //               ],
-    //             ),
-    //           ),
-    //           CarouselSlider(
-    //             options: CarouselOptions(
-    //               height: 500,
-    //               reverse: false,
-    //               enableInfiniteScroll: false,
-    //               enlargeCenterPage: true,
-    //               // aspectRatio: 2.0,
-    //               pageViewKey: PageStorageKey<String>('carousel_slider'),
-    //             ),
-    //             items: [
-    //               Column(
-    //                 children: [
-    //                   Card(
-    //                     child: LineChartHomeOne(),
-    //                   ),
-    //                   Container(
-    //                     height: 200,
-    //                     color: Colors.red,
-    //                   )
-    //                 ],
-    //               ),
-    //               Column(
-    //                 children: [
-    //                   Card(
-    //                     child: LineChartHomeTwo(),
-    //                   ),
-    //                   Container(
-    //                     height: 200,
-    //                     color: Colors.red,
-    //                   )
-    //                 ],
-    //               ),
-    //             ],
-    //           ),
-    //           // Expanded(
-    //           //   child: GridView.count(
-    //           //     crossAxisCount: 2,
-    //           //     children: [
-    //           //       Card(
-    //           //         child: Text('data'),
-    //           //       ),
-    //           //     ],
-    //           //   ),
-    //           // )
-    //         ],
-    //       ),
-    //     ),
-    //   ],
-    // ),
   }
 }
