@@ -205,7 +205,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('eek', style: TextStyle(color: Colors.white))
+                              Text('eek', style: TextStyle(color: Colors.white, fontSize: 12)
                             ],
                           ),
                         ),
