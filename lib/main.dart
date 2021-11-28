@@ -200,7 +200,10 @@ class _MyHomePageState extends State<MyHomePage> {
                             gradient: LinearGradient(
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
-                                colors: [Colors.indigo, Colors.indigoAccent]),
+                                colors: [
+                                  Colors.indigo,
+                                  Colors.blue,
+                                ]),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -217,7 +220,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 '1.544.600',
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 15,
+                                    fontSize: 18,
                                     fontFamily: "Lexend",
                                     fontWeight: FontWeight.w300),
                               ),
@@ -245,9 +248,43 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Column(
                     children: [
                       Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
                         child: Container(
-                          padding: EdgeInsets.only(bottom: 10),
-                          child: LineChartHomeOne(),
+                          width: 500,
+                          height: 150,
+                          padding: EdgeInsetsDirectional.all(10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            gradient: LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [
+                                  Colors.green,
+                                  Colors.yellow,
+                                ]),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Outlet Balikpapan Baru',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontFamily: "Lexend",
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                '1.544.600',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontFamily: "Lexend",
+                                    fontWeight: FontWeight.w300),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Container(
