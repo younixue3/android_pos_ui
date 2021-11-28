@@ -205,7 +205,16 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('eek', style: TextStyle(color: Colors.white, fontSize: 12)
+                              Text(
+                                'Outlet Balikpapan Baru',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 12),
+                              ),
+                              Text(
+                                '1.544.600',
+                                style:
+                                    TextStyle(color: Colors.white, fontSize: 8),
+                              ),
                             ],
                           ),
                         ),
