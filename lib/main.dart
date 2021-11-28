@@ -208,12 +208,18 @@ class _MyHomePageState extends State<MyHomePage> {
                               Text(
                                 'Outlet Balikpapan Baru',
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 12),
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontFamily: "Lexend",
+                                    fontWeight: FontWeight.bold),
                               ),
                               Text(
                                 '1.544.600',
-                                style:
-                                    TextStyle(color: Colors.white, fontSize: 8),
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                    fontFamily: "Lexend",
+                                    fontWeight: FontWeight.w300),
                               ),
                             ],
                           ),

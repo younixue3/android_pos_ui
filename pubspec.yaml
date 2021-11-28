@@ -78,6 +78,16 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: Lexend
+      fonts:
+        - asset: assets/default/fonts/Lexend/Lexend-Regular.ttf
+        - asset: assets/default/fonts/Lexend/Lexend-Bold.ttf
+          weight: 700
+        - asset: assets/default/fonts/Lexend/Lexend-Light.ttf
+          weight: 300
+        - asset: assets/default/fonts/Lexend/Lexend-ExtraBold.ttf
+          weight: 800
   # fonts:
   #   - family: Schyler
   #     fonts:
