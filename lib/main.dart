@@ -176,135 +176,211 @@ class _MyHomePageState extends State<MyHomePage> {
             // flexibleSpace:
           ),
           SliverToBoxAdapter(
-            child: CarouselSlider(
-              options: CarouselOptions(
-                reverse: false,
-                enableInfiniteScroll: false,
-                aspectRatio: 0.3,
-                pageViewKey: PageStorageKey<String>('carousel_slider'),
-              ),
-              items: [
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 6),
-                  child: Column(
-                    children: [
-                      Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Container(
-                          width: 500,
-                          height: 150,
-                          padding: EdgeInsetsDirectional.all(10),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            gradient: LinearGradient(
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                colors: [
-                                  Colors.indigo,
-                                  Colors.blue,
-                                ]),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Outlet Balikpapan Baru',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontFamily: "Lexend",
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                '1.544.600',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontFamily: "Lexend",
-                                    fontWeight: FontWeight.w300),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 500,
-                        width: 500,
-                        margin: EdgeInsets.only(top: 10),
-                        child: Card(
-                          child: Container(
-                            padding: EdgeInsets.all(10),
-                            child: Text('Outlet Balikpapan Baru',
-                                style: TextStyle(fontSize: 25)),
-                          ),
-                        ),
-                      )
-                    ],
+              child: Container(
+            margin: EdgeInsets.only(top: 20),
+            child: Column(
+              children: [
+                CarouselSlider(
+                  options: CarouselOptions(
+                    reverse: false,
+                    enableInfiniteScroll: false,
+                    aspectRatio: 0.6,
+                    pageViewKey: PageStorageKey<String>('carousel_slider'),
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 6),
-                  child: Column(
-                    children: [
-                      Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Container(
-                          width: 500,
-                          height: 150,
-                          padding: EdgeInsetsDirectional.all(10),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            gradient: LinearGradient(
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                colors: [
-                                  Colors.green,
-                                  Colors.yellow,
-                                ]),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Outlet Balikpapan Baru',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontFamily: "Lexend",
-                                    fontWeight: FontWeight.bold),
+                  items: [
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 6),
+                      child: Column(
+                        children: [
+                          Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Container(
+                              width: 500,
+                              height: 150,
+                              padding: EdgeInsetsDirectional.all(15),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      Colors.indigo,
+                                      Colors.blue,
+                                    ]),
                               ),
-                              Text(
-                                '1.544.600',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontFamily: "Lexend",
-                                    fontWeight: FontWeight.w300),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Outlet Balikpapan Baru',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 15,
+                                            fontFamily: "Lexend"),
+                                      ),
+                                      IconButton(
+                                        padding: EdgeInsets.all(0),
+                                        constraints:
+                                            BoxConstraints(maxHeight: 20),
+                                        onPressed: () {},
+                                        icon: Icon(
+                                          Icons.help,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Rp. ',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 28,
+                                            fontFamily: "Lexend",
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                      Text(
+                                        '1.544.600',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 28,
+                                            fontFamily: "Lexend",
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_drop_up_rounded,
+                                        color: Colors.greenAccent,
+                                        size: 40,
+                                      )
+                                    ],
+                                  )
+                                ],
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                          Container(
+                            height: 500,
+                            width: 500,
+                            margin: EdgeInsets.only(top: 10),
+                            child: Card(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: Container(
+                                padding: EdgeInsets.all(10),
+                                child: Text('Outlet Balikpapan Baru',
+                                    style: TextStyle(fontSize: 25)),
+                              ),
+                            ),
+                          )
+                        ],
                       ),
-                      Container(
-                        height: 500,
-                        width: 500,
-                        margin: EdgeInsets.only(top: 10),
-                        child: Card(
-                          child: Container(
-                            padding: EdgeInsets.all(10),
-                            child: Text('Outlet Balikpapan Baru',
-                                style: TextStyle(fontSize: 25)),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 6),
+                      child: Column(
+                        children: [
+                          Card(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Container(
+                              width: 500,
+                              height: 150,
+                              padding: EdgeInsetsDirectional.all(15),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      Colors.greenAccent,
+                                      Colors.indigo,
+                                    ]),
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Outlet Balikpapan Baru',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 15,
+                                            fontFamily: "Lexend"),
+                                      ),
+                                      IconButton(
+                                        padding: EdgeInsets.all(0),
+                                        constraints:
+                                            BoxConstraints(maxHeight: 20),
+                                        onPressed: () {},
+                                        icon: Icon(
+                                          Icons.help,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Rp. ',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 28,
+                                            fontFamily: "Lexend",
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                      Text(
+                                        '1.544.600',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 28,
+                                            fontFamily: "Lexend",
+                                            fontWeight: FontWeight.w700),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_drop_down_rounded,
+                                        color: Colors.redAccent,
+                                        size: 40,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
-                        ),
-                      )
-                    ],
-                  ),
+                          Container(
+                            height: 500,
+                            width: 500,
+                            margin: EdgeInsets.only(top: 10),
+                            child: Card(
+                              child: Container(
+                                padding: EdgeInsets.all(10),
+                                child: Text('Outlet Balikpapan Baru',
+                                    style: TextStyle(fontSize: 25)),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
-          )
+          ))
         ],
       ),
     );
